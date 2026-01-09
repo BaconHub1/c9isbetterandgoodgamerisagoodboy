@@ -1,4 +1,4 @@
-#include "memory.h"
+﻿#include "memory.h"
 
 std::uint32_t memory_t::find_process_id(const std::string& process_name)
 {
@@ -83,7 +83,6 @@ bool memory_t::attach_to_process(const std::string& process_name)
 
 std::string memory_t::read_string(std::uint64_t address)
 {
-
 	std::int32_t string_length = read<std::int32_t>(address + 0x10);
 	std::uint64_t string_address = (string_length >= 16) ? read<std::uint64_t>(address) : address;
 
